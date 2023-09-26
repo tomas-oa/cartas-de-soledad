@@ -15,10 +15,10 @@ export default function App () {
           src="/estampilla_mobile.webp"
           alt="estampilla mobile"
           className="absolute -rotate-12 aspect-auto -top-28 -right-12 -z-10"
-          srcSet='
+          srcSet="
           /estampilla_mobile.webp 140w,
           /estampilla_desktop.webp 240w
-          '
+          "
         />
       </aside>
       <main className="text-[#333] grid gap-2">
@@ -30,10 +30,10 @@ export default function App () {
           de tu soledad
         </h1>
         <p className="mb-6 md:mb-10 md:[font-size:1.125rem] [text-wrap:balance] leading-snug mt-[2px]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iste
-          dolorum, sunt optio fugiat similique fugit minus, esse molestiae
-          doloribus, aut aspernatur voluptatum voluptatem amet. Excepturi sit
-          ipsum autem ullam.
+          Todos hemos experimentado la soledad en algún momento. Pero, ¿qué hay
+          detrás de esa sensación? ¿Cómo definirías y describirías la soledad en
+          tu propia experiencia? Comparte tus pensamientos y
+          sentimientos de manera anónima en una carta.
         </p>
         <Form />
       </main>
