@@ -2,7 +2,10 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Calistoga } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ['latin'],
+  weight: '400'
+})
 const calistoga = Calistoga({
   weight: ['400'],
   subsets: ['latin']
@@ -29,10 +32,10 @@ export default function RootLayout ({
 }) {
   return (
     <html lang="es">
-      <body className={`${inter.className} max-w-[1000px] mx-auto min-h-screen grid place-content-center grid-cols-[65%,1fr] gap-8 bg-[#fffef5]`}>
-        <main className='text-[#333] grid gap-4'>
-          <h1 className={`${calistoga.className} text-6xl`}>Cuéntame<br />de tu soledad</h1>
-          <p className='[text-wrap:balance]'>
+      <body className={`${inter.className} md:max-w-[1080px] grid-cols-1 w-5/6 mx-auto min-h-screen grid place-content-center md:grid-cols-[65%,1fr] gap-8 bg-[#fffef5]`}>
+        <main className='text-[#333] grid gap-2'>
+          <h1 className={`${calistoga.className} text-8xl`}>Cuéntame<br />de tu soledad</h1>
+          <p className='mb-10 [font-size:1.125rem] [text-wrap:balance] leading-snug mt-[2px]'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Animi iste dolorum, sunt optio fugiat similique fugit minus,
             esse molestiae doloribus, aut aspernatur voluptatum voluptatem amet.
@@ -40,17 +43,17 @@ export default function RootLayout ({
           </p>
           <form className='relative'>
             <textarea
-              className='bg-slate-100 text-[#333] w-full h-80 p-4 resize-none rounded-md border border-slate-200 shadow-sm focus:outline focus:outline-offset-0 focus:outline-2 focus:outline-slate-300'
+              className='bg-slate-100 text-[#333] w-full h-72 p-4 resize-none rounded-md border border-slate-200 shadow-sm focus:outline focus:outline-offset-0 focus:outline-2 focus:outline-slate-300'
               placeholder='Escribe aquí...'
             >
             </textarea>
-            <button className='w-9 grid place-content-center absolute bottom-4 right-5 aspect-square rounded-full border bg-blue-600 hover:scale-105 hover:transition-all'>
+            <button className='w-9 grid place-content-center absolute bottom-4 right-5 aspect-square rounded-full border bg-[#375eb8] hover:scale-105 hover:transition-all'>
               <Send />
             </button>
           </form>
         </main>
-        <aside className='flex flex-col justify-start items-center'>
-          <img width={'200px'} height={'225px'} src="/florciña.png" alt="estampilla" className='-rotate-[8deg]' />
+        <aside className='relative'>
+          <img width={'240px'} src="/florciña.png" alt="estampilla" className='absolute -rotate-[8deg] aspect-auto top-0 -right-10' />
         </aside>
       </body>
     </html>
