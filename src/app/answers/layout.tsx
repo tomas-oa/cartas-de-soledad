@@ -5,6 +5,8 @@ const calistoga = Calistoga({
   subsets: ['latin']
 })
 
+export const dynamic = 'force-dynamic'
+
 export default function DashboardLayout ({
   children
 }: {
