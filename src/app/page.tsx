@@ -8,7 +8,7 @@ const calistoga = Calistoga({
 
 export default function App () {
   return (
-    <>
+    <div className='md:max-w-[1080px] grid-cols-1 w-5/6 mx-auto min-h-screen grid place-content-center md:grid-cols-[70%,1fr] gap-8 bg-[#fffef5]'>
       <aside className="relative md:hidden">
         <img
           width={'120px'}
@@ -45,6 +45,6 @@ export default function App () {
           className="absolute -rotate-[8deg] aspect-auto top-0 md:-right-4 lg:-right-10"
         />
       </aside>
-    </>
+    </div>
   )
 }
