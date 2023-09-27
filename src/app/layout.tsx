@@ -20,7 +20,7 @@ export default function RootLayout ({
 }) {
   return (
     <html lang="es">
-      <body className={`${inter.className} md:max-w-[1080px] grid-cols-1 w-5/6 mx-auto min-h-screen grid place-content-center md:grid-cols-[70%,1fr] gap-8 bg-[#fffef5]`}>
+      <body className={`${inter.className}`}>
         {children}
         <Toaster />
       </body>
