@@ -25,8 +25,6 @@ export default function TextArea () {
           error: 'Hubo un error al enviar tu respuesta 😔'
         }
       )
-
-      toast.dismiss()
     }
 
     textAreaRef.current.value = ''
