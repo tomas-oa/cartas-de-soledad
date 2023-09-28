@@ -8,10 +8,15 @@ export default async function Answers () {
   return (
     <main className='flex flex-col items-center gap-12'>
       <ul className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-12'>
-        {data?.map(({ id, created_at: createdAt, response }) => (
+        {data?.map(({ id, created_at: createdAt, response, does_consent: doesConsent }) => (
           <li key={id} className='border rounded-lg p-8 shadow-md bg-slate-100'>
-            <small>{new Date(createdAt).toLocaleDateString()}</small>
-            <p className='mt-4 [text-wrap:balance]'>{response}</p>
+            <header className='flex justify-between'>
+              <small>Consentimiento: {doesConsent as boolean ? 'Sí' : 'No'}</small>
+              <small>{new Date(createdAt).toLocaleDateString()}</small>
+            </header>
+            <main>
+              <p className='mt-4 [text-wrap:balance]'>{response}</p>
+            </main>
           </li>
         ))}
       </ul>
