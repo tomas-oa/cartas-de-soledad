@@ -4,15 +4,19 @@ import { useState } from 'react'
 import InfoModal from './InfoModal'
 import { Info } from './Icons'
 
-export default function Modal () {
+interface Props {
+  className?: string
+}
+
+export default function Modal ({ className }: Props) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <>
-      <button onClick={() => { setIsOpen(true) }} className='absolute top-12 w-12 h-12 md:w-16 md:h-16 left-8 md:bottom-72 right-24 lg:bottom-[6.4rem] lg:right-28 md:top-auto md:left-auto z-10'>
+    <div className={className}>
+      <button onClick={() => { setIsOpen(true) }} className='w-12 h-12 md:w-16 md:h-16 z-10'>
         <Info />
       </button>
       <InfoModal isOpen={isOpen} closeModal={() => { setIsOpen(false) }} />
-    </>
+    </div>
   )
 }
