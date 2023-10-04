@@ -39,7 +39,6 @@ export default function TextArea () {
     <div className='relative'>
       <textarea
         required={true}
-        autoFocus={true}
         ref={textAreaRef}
         name="answer"
         className="bg-slate-100 text-[#333] w-full h-52 sm:h-72 p-2 px-3 sm:p-4 lg:w-11/12 resize-none rounded-md border border-slate-200 shadow-sm focus:outline focus:outline-offset-0 focus:outline-2 focus:outline-slate-300"
