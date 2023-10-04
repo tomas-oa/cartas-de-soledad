@@ -14,7 +14,7 @@ export default function InfoModal ({ isOpen, closeModal }: Props) {
   if (!isOpen) return null
 
   return (
-    <div className="fixed inset-0 bg-opacity-25 backdrop-blur-sm flex items-center justify-center z-50 transition-all">
+    <div className="fixed inset-0 bg-opacity-25 backdrop-blur-xl flex items-center justify-center z-50 transition-all">
       <article className="bg-stone-100 w-11/12 mx-auto p-6 rounded-md shadow-2xl gap-2 flex flex-col items-center ring-1 ring-stone-200 md:gap-7 md:w-7/12 md:p-12 lg:w-1/2 lg:gap-8">
         <header>
           <h2 className={`${calistoga.className} text-3xl md:text-4xl lg:text-6xl`}>
