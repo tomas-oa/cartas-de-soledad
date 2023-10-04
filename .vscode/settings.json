@@ -1,6 +1,12 @@
 {
   "conventionalCommits.scopes": [
     "og image",
-    "form"
+    "form",
+    "favicon",
+    "images",
+    "styles",
+    "modal",
+    "main page",
+    "layout"
   ]
 }
