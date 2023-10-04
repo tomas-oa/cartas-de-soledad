@@ -2,6 +2,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Toaster } from 'react-hot-toast'
+import StampMobile from '@/components/StampMobile'
+import Modal from '@/components/Modal'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -20,7 +22,9 @@ export default function RootLayout ({
 }) {
   return (
     <html lang="es">
-      <body className={`${inter.className} bg-[#fffef5]`}>
+      <body className={`${inter.className} bg-[#fffef5] text-[#333] relative`}>
+        <Modal />
+        <StampMobile />
         {children}
         <Toaster />
       </body>
