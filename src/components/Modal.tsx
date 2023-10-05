@@ -13,8 +13,8 @@ export default function Modal ({ className }: Props) {
 
   return (
     <div className={className}>
-      <button onClick={() => { setIsOpen(true) }} className='z-10 pb-2'>
-        <Info className='stroke-[#375eb8] w-14 h-14 lg:w-auto lg:h-auto' />
+      <button onClick={() => { setIsOpen(true) }} className='z-10 pb-2 lg:pr-1'>
+        <Info className='stroke-[#375eb8] w-14 h-14 lg:w-[4.5rem] lg:h-[4.5rem]' />
       </button>
       <InfoModal isOpen={isOpen} closeModal={() => { setIsOpen(false) }} />
     </div>

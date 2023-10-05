@@ -12,7 +12,7 @@ export default function Header () {
   return (
     <>
       <div className='flex items-center gap-2'>
-        <Modal className='md:hidden md:w-14 md:14' />
+        <Modal className='md:hidden' />
         <div className='md:hidden mb-2'>
           <Link href={'https://instagram.com/cartasdesoledad'} target='_blank'>
             <Instagram className='w-14 h-14 stroke-[#375eb8]' />
