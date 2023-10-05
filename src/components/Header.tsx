@@ -1,5 +1,7 @@
 import { Calistoga } from 'next/font/google'
 import Modal from './Modal'
+import { Instagram } from './Icons'
+import Link from 'next/link'
 
 const calistoga = Calistoga({
   weight: ['400'],
@@ -9,7 +11,14 @@ const calistoga = Calistoga({
 export default function Header () {
   return (
     <>
-      <Modal className='md:hidden' />
+      <div className='flex items-center gap-2'>
+        <Modal className='md:hidden md:w-14 md:14' />
+        <div className='md:hidden mb-2'>
+          <Link href={'https://instagram.com/cartasdesoledad'} target='_blank'>
+            <Instagram className='w-14 h-14 stroke-[#375eb8]' />
+          </Link>
+        </div>
+      </div>
       <header className='flex flex-col'>
         <h1 className={`${calistoga.className} text-5xl md:text-7xl lg:text-8xl mb-2`}>
           Cuéntame<br />de tu soledad
