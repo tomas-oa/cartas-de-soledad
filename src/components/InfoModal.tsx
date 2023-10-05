@@ -37,7 +37,7 @@ export default function InfoModal ({ isOpen, closeModal }: Props) {
             Mi nombre es Isidora Moreno y soy estudiante de diseño en la Pontifica
             Universidad Católica de Chile. Creé el proyecto &laquo;Cartas de
             Soledad&raquo; para recopilar vivencias anónimas sobre la soledad, que
-            me permitan levantar información para mi proyecto de título. <br /> En caso
+            me permitan levantar información para mi proyecto de título. En caso
             de cualquier duda, puedes contactarme en{' '}
             <a
               className="text-blue-700 underline"
