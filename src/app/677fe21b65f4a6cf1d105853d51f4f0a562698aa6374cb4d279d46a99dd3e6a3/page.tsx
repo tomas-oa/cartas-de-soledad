@@ -10,15 +10,16 @@ const calistoga = Calistoga({
 
 export default async function Answers () {
   const supabase = createServerComponentClient({ cookies })
-  const { data } = await supabase.from('answers').select('id, response, created_at').order('created_at', { ascending: false })
+  const { data } = await supabase.from('answers').select('id, response, created_at').order('created_at', { ascending: true })
 
   return (
     <main className='flex flex-col items-center gap-12'>
       <h1 className={`${calistoga.className} text-3xl md:text-7xl text-center`}>Cartas recibidas: <span className='mx-1'>{data?.length}</span></h1>
       <ul className='grid auto-rows-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>
-        {data?.map(({ id, created_at: createdAt, response }) => (
+        {data?.map(({ id, created_at: createdAt, response }, index) => (
           <li key={id} className='border rounded-lg p-8 shadow-md bg-slate-100 relative h-fit row-span-1'>
-            <header className='flex justify-center'>
+            <header className='flex w-full justify-between'>
+              <small className='font-bold'>{index + 1}</small>
               <small>Fecha: {new Date(createdAt).toLocaleString('es-CL')}</small>
             </header>
             <main>
