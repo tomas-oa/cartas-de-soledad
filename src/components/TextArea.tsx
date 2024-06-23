@@ -1,6 +1,7 @@
 'use client'
 
 import { type FormEvent, useEffect, useRef } from 'react'
+// @ts-expect-error - useFormStatus is not typed yet
 import { useFormStatus } from 'react-dom'
 import Send from './Icons'
 import { toast } from 'react-hot-toast'
@@ -12,7 +13,7 @@ export default function TextArea () {
   useEffect(() => {
     if (textAreaRef.current === null) return
 
-    if (pending) {
+    if (pending as boolean) {
       toast.promise(
         new Promise<void>((resolve) => {
           setTimeout(() => {
