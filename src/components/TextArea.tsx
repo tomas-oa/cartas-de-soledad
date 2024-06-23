@@ -1,7 +1,7 @@
 'use client'
 
 import { type FormEvent, useEffect, useRef } from 'react'
-import { experimental_useFormStatus as useFormStatus } from 'react-dom'
+import { useFormStatus } from 'react-dom'
 import Send from './Icons'
 import { toast } from 'react-hot-toast'
 
