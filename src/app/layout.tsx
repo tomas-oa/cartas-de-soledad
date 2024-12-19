@@ -21,7 +21,7 @@ export default function RootLayout ({
 }) {
   return (
     <html lang="es">
-      <body className={`${inter.className} bg-[#fffef5] text-[#333] relative`}>
+      <body className={`${inter.className} bg-[#e5e5e5] text-[#333] relative`}>
         <StampMobile />
         {children}
         <Toaster />
